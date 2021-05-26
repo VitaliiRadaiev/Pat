@@ -17,42 +17,12 @@
         @media (min-width: 768px) {
             display: none;
         }
-    }
 
-    &__btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 69px;
-        min-width: 69px;
-        border-radius: 50%;
-        background-color: $mainColor2;
-
-        &.swiper-button-disabled {
-            & > span {
-                opacity: 0.4;
-            }
-        }
-
-        & span {
-            width: 35px;
-            transition: all .3s ease;
-            & img {
-                width: 100%;
-                height: auto;
-            }
+        & .slider-btn_prev {
+            margin-right: 28px;
         }
     }
 
-    &__btn-prev {
-        margin-right: 28px;
-        & > span {
-            transform: rotate(180deg);
-        }
-    }
-
-    &__btn-next {
-    }
 
     &__nav {
         padding: 2px;

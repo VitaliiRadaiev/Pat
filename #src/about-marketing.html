@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "New Project"
+})
+
+<body class="">
+    <!-- == TOP LINE ================== -->
+    @@include('common/header/_header.html',{
+        "dark": ""
+    })
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page about-marketing-page">
+        <section class="hero">
+            <div class="hero__bg ibg">
+                <img src="img/photo/hero2.jpg" alt="">
+            </div>
+            <div class="hero__body container">
+                <h1 class="hero__title title-1">About PAT Marketing</h1>
+            </div>
+        </section>
+        <section class="head">
+            <div class="container">
+                <h3 class="head__title title-3 title-line">
+                    <strong>
+                        we are a business unit from port authority of thailand committed
+                    </strong>
+                    <strong>
+                        to support your business to grow effectively and smoothly.
+                    </strong>
+                </h3>
+            </div>
+        </section>
+
+        <section class="text-info-block">
+            <div class="text-info-block__body container">
+                <div class="text-info-block__img ibg">
+                    <img src="img/photo/info-block2.jpg" alt="">
+                </div>
+                <div class="text-info-block__text-wrap text-content">
+                    <h3>
+                        Our team is comprised of deep
+                        knowledge of logistics market
+                        in Thailand.
+                    </h3>
+                    <p>
+                        We understand all obstacles in seeking
+                        opportunity to grow your logistics business
+                        in this special market. Let us be your point
+                        of contact to make your business successful
+                        even easier.
+                    </p>
+                    <p>
+                        To unlock your untapped opportunities,
+                        we are the right person to give you
+                        consultation and find the business solution
+                        that best meet your needs, whether you are
+                        ocean carriers, shippers, forwarders,
+                        terminal operators, or logistics provider.
+                        Let us help you make your business grow
+                        effectively and smoothly.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- == FOOTER ================== -->
+    @@include('common/footer/_footer.html',{})
+    <!-- == // FOOTER ================== -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+        defer></script>
+    @@include('_js.html',{})
+
+</body>
+
+</html>

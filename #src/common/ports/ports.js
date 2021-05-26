@@ -27,8 +27,8 @@ if ($ports) {
             loadPrevNext: true,
         },
         navigation: {
-            nextEl: $ports.querySelector('.ports__btn-next'),
-            prevEl: $ports.querySelector('.ports__btn-prev'),
+            nextEl: $ports.querySelector('.slider-btn_next'),
+            prevEl: $ports.querySelector('.slider-btn_prev'),
         },
         thumbs: {
             swiper: document.documentElement.clientWidth < 768 ? false : dataSliderThembs,

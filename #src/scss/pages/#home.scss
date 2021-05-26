@@ -1,3 +1,15 @@
+.home-page {
+    & ~ .footer {
+        @media (min-width: 992px) {
+            padding-top: 0;
+        }
+        & .footer__circle-wrap  {
+            @media (min-width: 992px) {
+                display: block;
+            }
+        }
+    }
+}
 .promo-header {
     position: relative;
     &__bg {

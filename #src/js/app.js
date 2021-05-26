@@ -8,18 +8,18 @@ window.addEventListener('load', function () {
 	document.body.classList.add('is-load');
 
 	// ==== ADD PADDING-TOP ================================
-	// {
-	// 	let wrapper = document.querySelector('._page._padding-top');
-	// 	if (wrapper) {
-	// 		let header = document.querySelector('.header');
-	// 		if(header) {
-	// 			const setPedding = () => wrapper.style.paddingTop = header.clientHeight + 'px';
-	// 			setPedding();
-	// 			window.addEventListener('resize', setPedding);
-	// 		}
+	{
+		let wrapper = document.querySelector('._padding-top');
+		if (wrapper) {
+			let header = document.querySelector('.header');
+			if(header) {
+				const setPedding = () => wrapper.style.paddingTop = header.clientHeight + 'px';
+				setPedding();
+				window.addEventListener('resize', setPedding);
+			}
 			
-	// 	}
-	// }
+		}
+	}
 	// ==== AND ADD PADDING-TOP ================================
 
 	@@include('_function.js');
@@ -29,6 +29,11 @@ window.addEventListener('load', function () {
 	@@include('../common/header/header.js');
 	@@include('../common/popup/popup.js');
 	@@include('../common/ports/ports.js');
+	
+	
+	
+	@@include('pages/#about.js');
+	@@include('pages/#news.js');
 	
 });
 
@@ -56,5 +61,5 @@ window.addEventListener('DOMContentLoaded', function() {
 	});
 });
 
-//@@include('plagins/lazy-load.js');
+@@include('../common/map-block/map-block.js');
 

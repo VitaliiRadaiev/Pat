@@ -57,6 +57,7 @@ let slider_about = new Swiper('.about__slider', {
 	//	el: '.slider-quality__pagging',
 	//	clickable: true,
 	//},
+	//watchSlidesVisibility: true,
 	// Arrows
 	navigation: {
 		nextEl: '.about__more .more__item_next',

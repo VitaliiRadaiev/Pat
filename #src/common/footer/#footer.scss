@@ -1,6 +1,6 @@
 .footer {
     position: relative;
-    padding: 0 0 150px;
+    padding: 132px 0 150px;
     overflow: hidden;
 
     @media (max-width: $md2+px) {
@@ -14,6 +14,7 @@
     &__circle-wrap {
         position: relative;
         height: 132px;
+        display: none;
 
         @media (max-width: $md2+px) {
             display: none;
@@ -275,6 +276,7 @@
             right: 0;
             transform: translate(24%, -93%);
             transition: all 0.3s ease;
+            pointer-events: none;
         }
     }
 }

@@ -1,0 +1,13 @@
+.head {
+
+    &__title {
+        margin-bottom: 75px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 50px;
+            line-height: 145%;
+            padding-bottom: 36px;
+            letter-spacing: 0.05em;
+        }
+    }
+}
