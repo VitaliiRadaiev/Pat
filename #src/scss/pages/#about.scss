@@ -1,3 +1,13 @@
+.about-page {
+    & .hero__title {
+        max-width: 6.48em;
+
+        @media (max-width: $md3+px) {
+            max-width: 4.48em;
+        }
+    }
+}
+
 .about-info {
     background: linear-gradient(180deg, #5E9D9F 0%, #425178 35.42%);
     &__body {

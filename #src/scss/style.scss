@@ -281,6 +281,7 @@ textarea {
 
 			& svg {
 				& path {
+					fill: #fff;
 					transition: all 0.3s ease;
 				}
 			}
@@ -310,6 +311,8 @@ textarea {
 	font-size: 80px;
 	line-height: 96%;
 	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 0;
 
 	&:not(.horizontal) {
 		display: flex;
@@ -484,7 +487,8 @@ button.btn-default {
 	font-weight: normal;
 	font-size: 25px;
 	line-height: 120%;
-	letter-spacing: 0.02em;
+	//letter-spacing: 0.02em;
+	letter-spacing: 0.017em;
 	color: $gray;
 
 	@media (max-width: $md3+px) {
@@ -531,6 +535,12 @@ button.btn-default {
 
 	& p {
 		margin-bottom: 1.2em;
+
+		&.uppercase {
+			text-transform: uppercase;
+			color:#4F4F4F;
+			margin-bottom: 1.29em;
+		}
 	}
 
 	& ul {
@@ -561,5 +571,7 @@ button.btn-default {
 @import "pages/#home";
 @import "pages/#about";
 @import "pages/#news";
+@import "pages/#news-detail";
+@import "pages/#contact";
 
 // ==== AND PAGES =====================================================

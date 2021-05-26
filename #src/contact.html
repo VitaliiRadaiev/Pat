@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "New Project"
+})
+
+<body class="">
+    <!-- == TOP LINE ================== -->
+    @@include('common/header/_header.html',{
+    "dark": ""
+    })
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page contact-page">
+        <section class="hero">
+            <div class="hero__bg ibg">
+                <img src="img/photo/hero3.jpg" alt="">
+            </div>
+            <div class="hero__body container">
+                <h1 class="hero__title title-1">contact us</h1>
+                <div class="hero__subtitle"><strong>let’s</strong> talk <strong>business</strong></div>
+            </div>
+        </section>
+        <section class="head">
+            <div class="container">
+                <h3 class="head__title title-3 title-line">
+                    <strong>
+                        we are a business unit from port authority of thailand committed
+                    </strong>
+                    <strong>
+                        to support your business to grow effectively and smoothly.
+                    </strong>
+                </h3>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <h2 class="contact__title">Contact Form</h2>
+                <form action="#" class="contact-form">
+                    <div class="contact-form__inputs">
+                        <div class="contact-form__inputs-item input-req">
+                            <label for="name" class="contact-form__label">your name</label>
+                            <input type="text" class="contact-form__input" id="name">
+                        </div>
+                        <div class="contact-form__inputs-item space"></div>
+                        <div class="contact-form__inputs-item input-req">
+                            <label for="email" class="contact-form__label ">email</label>
+                            <input type="email" class="contact-form__input" id="email">
+                        </div>
+                        <div class="contact-form__inputs-item phone">
+                            <label for="tel" class="contact-form__label">telephone number</label>
+                            <input type="text" class="contact-form__input _mask" id="tel">
+                        </div>
+                        <div class="contact-form__inputs-item input-req">
+                            <label for="company" class="contact-form__label">company</label>
+                            <input type="text" class="contact-form__input" id="company">
+                        </div>
+                        <div class="contact-form__inputs-item field">
+                            <label for="field" class="contact-form__label">your business field</label>
+                            <input type="text" class="contact-form__input" id="field">
+                        </div>
+                    </div>
+
+                    <label for="text" class="contact-form__label">
+                        What is the business opportunity
+                        that you are looking for?
+                    </label>
+                    <textarea class="contact-form__textarea" id="text"></textarea>
+
+                    <div class="contact-form__captcha">
+                        <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                    </div>
+                    <button type="submit" class="btn-default contact-form__submit">submit</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="map-block">
+            <div class="map-block__column-1 container">
+                <div class="map-block__text-wrap">
+                    <img class="map-block__icon" src="img/icons/local.svg" alt="">
+                    <div class="map-block__address">
+                        <p>
+                            Port Authority of Thailand,
+                        </p>
+                        <p>
+                            444 Ta Rua Road, Klong Toey,
+                        </p>
+                        <p>
+                            Bangkok, Thailand 10110.
+                        </p>
+                    </div>
+                    <a href="tel:6622695317">Tel: +662 269 5317</a>
+                    <a href="mailto:patmarketing@port.co.th ">Email: patmarketing@port.co.th </a>
+                </div>
+            </div>
+            <div class="map-block__column-2">
+                <div class="map-block__map" id="map" data-icon-src="img/icons/local-solid.svg"
+                    data-lat="13.713346082324241" data-lng="100.56397236961912"></div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- == FOOTER ================== -->
+    @@include('common/footer/_footer.html',{})
+    <!-- == // FOOTER ================== -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+        defer></script>
+    @@include('_js.html',{})
+
+</body>
+
+</html>

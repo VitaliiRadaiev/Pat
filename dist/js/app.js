@@ -658,9 +658,8 @@ function inputs_init(inputs) {
 				//'+7(999) 999 9999'
 				//'+38(999) 999 9999'
 				//'+375(99)999-99-99'
-				let maskValue = input.dataset.mask;
 				input.classList.add('_mask');
-				Inputmask(maskValue, {
+				Inputmask('+375(99)999-99-99', {
 					//"placeholder": '',
 					clearIncomplete: true,
 					clearMaskOnLostFocus: true,
@@ -1134,10 +1133,10 @@ if($ourTeam) {
 	let $gallerSlider = document.querySelector('.gallery__slider');
 if($gallerSlider) {
     let dataSlider = new Swiper($gallerSlider.querySelector('.swiper-container'), {
-        // autoplay: {
-        //     delay: 3000,
-        //     disableOnInteraction: false,
-        // },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
         slidesPerView: 'auto',
         spaceBetween: 0,
         speed: 800,

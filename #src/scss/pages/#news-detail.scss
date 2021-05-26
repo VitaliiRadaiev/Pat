@@ -1,0 +1,217 @@
+.news-detail-page {
+    & ~ .footer {
+        @media (min-width: 992px) {
+            padding-top: 46px;
+        }
+
+        @media (max-width: $md3+px) {
+            padding-top: 47px;
+        }
+    }
+}
+
+.article {
+    padding-top: 94px;
+    margin-bottom: 86px;
+
+    @media (max-width: $md3+px) {
+        padding-top: 56px;
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        text-transform: none;
+        margin-bottom: 31px;
+        color: $mainColor;
+        line-height: 135%;
+
+        @media (max-width: $md3+px) {
+            line-height: 110%;
+            margin-bottom: 36px;
+        }
+    }
+
+    &__img {
+        display: block;
+        margin-bottom: 60px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 32px;
+            width: calc(100% + 40px);
+            margin-left: -20px;
+            position: relative;
+            height: 0;
+            padding-bottom: 78%;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+            display: block;
+
+            @media (max-width: $md3+px) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+               object-fit: cover;
+            }
+        }
+    }
+
+    &__body {
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__column-1 {
+        flex: 0 0 224px;
+    
+        @media (min-width: 768px) {
+            padding-right: 20px;
+        }
+    }
+    &__column-2 {
+        flex: 1 1 auto;
+
+        @media (min-width: 768px) {
+            max-width: 864px;
+            padding-top: 5px;
+    
+        }
+    }
+
+    &__date {
+        font-size: 20px;
+        line-height: 160%;
+        text-transform: uppercase;
+        color: $linkColor;
+        font-weight: 700;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 18px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 46px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 34px;
+        }
+        &.text-content {
+            & > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__footer {
+        @media (min-width: 576px) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        & .social {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__next-news {
+        display: inline-flex;
+        align-items: center;
+        font-size: 22px;
+        line-height: 110%;
+        color: $mainColor2;
+        transition: all .3s ease;
+        margin-bottom: 10px;
+        @media (min-width: 992px) {
+            &:hover {
+                color: $mainColor;
+
+                & svg {
+                    transform: translateX(5px);
+                    & path {
+                        fill: $mainColor;
+                    }
+                }
+            }
+        }
+
+        & img, & svg {
+            width: 21px;
+            height: auto;
+            margin-left: 14px;
+            margin-top: 1px;
+        }
+
+        & svg {
+            transition: all .3s ease;
+
+            & path {
+                transition: all .3s ease;
+                fill: $mainColor2;
+            }
+        } 
+    }
+}
+
+
+
+
+
+
+
+
+.other-news {
+    padding-top: 60px;
+    @media (max-width: $md3+px) {
+        padding-top: 30px;
+    }
+
+    &__title {
+        color: $mainColor;
+        margin-bottom: 54px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 47px;
+        }
+    }
+
+    &__list {
+        text-align: left;
+
+        margin: 0 -66px;
+
+        @media (max-width: 1257.98px) {
+            margin: 0 -25px;
+        }
+        @media (max-width: $md2+px) {
+            margin: 0 -10px;
+        }
+
+        @media (min-width: 576px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        & > li {
+            padding: 0 66px;
+            flex: 0 1 50%;
+            margin-bottom: 102px;
+
+            @media (max-width: 1257.98px) {
+                padding: 0 25px;
+            }
+            @media (max-width: $md2+px) {
+                padding: 0 10px;
+                margin-bottom: 61px;
+            }
+        }
+    }
+}
+

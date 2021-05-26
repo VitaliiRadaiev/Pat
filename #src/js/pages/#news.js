@@ -1,10 +1,10 @@
 let $gallerSlider = document.querySelector('.gallery__slider');
 if($gallerSlider) {
     let dataSlider = new Swiper($gallerSlider.querySelector('.swiper-container'), {
-        // autoplay: {
-        //     delay: 3000,
-        //     disableOnInteraction: false,
-        // },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
         slidesPerView: 'auto',
         spaceBetween: 0,
         speed: 800,
