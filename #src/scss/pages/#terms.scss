@@ -1,0 +1,51 @@
+.terms-page {
+    & .container {
+        @media (max-width: $md3+px) {
+            padding: 0 19px;
+        }
+    }
+
+    & .text-content {
+        padding-top: 103px;
+        letter-spacing: 0;
+        margin-bottom: 64px;
+
+        @media (max-width: $md3+px) {
+            padding-top: 54px;
+            margin-bottom: 34px;
+        }
+
+        & h1,
+        & h2,
+        & h3,
+        & h4,
+        & h5,
+        & h5 {
+            color: $mainColor2;
+        }
+
+        & h2 {
+            margin-bottom: 0.79em;
+
+            @media (max-width: $md3+px) {
+                font-size: 52px;
+                line-height: 100%;
+                margin-bottom: 0.85em;
+            }
+        }
+
+        h3 {
+            font-size: 32px;
+            line-height: 120%;
+            letter-spacing: 0;
+            margin-bottom: 0.6em;
+
+            @media (max-width: $md3+px) {
+                font-weight: bold;
+                font-size: 25px;
+                line-height: 120%;
+                margin-bottom: 0.67em;
+            }
+        }
+    }
+}

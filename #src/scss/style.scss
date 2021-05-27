@@ -541,14 +541,45 @@ button.btn-default {
 			color:#4F4F4F;
 			margin-bottom: 1.29em;
 		}
+
+		& + h3 {
+			margin-top: 3.45em;
+
+			@media (max-width: $md3+px) {
+				margin-top: 3.1em;
+			}
+		}
+
 	}
 
 	& ul {
 		margin-bottom: 20px;
+		margin-bottom: 1.2em;
+
+		& + h3 {
+			margin-top: 3.45em;
+
+			@media (max-width: $md3+px) {
+				margin-top: 3.1em;
+			}
+		}
 	}
 
 	& ol {
-		margin-bottom: 20px;
+		margin-bottom: 1.2em;
+		list-style: none;
+
+		& > li {
+			list-style: none;
+		}
+
+		& + h3 {
+			margin-top: 3.45em;
+
+			@media (max-width: $md3+px) {
+				margin-top: 3.1em;
+			}
+		}
 	}
 
 	& figure {
@@ -594,5 +625,6 @@ button.btn-default {
 @import "pages/#contact";
 @import "pages/#gallery";
 @import "pages/#single-port";
+@import "pages/#terms";
 
 // ==== AND PAGES =====================================================

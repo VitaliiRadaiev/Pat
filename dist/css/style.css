@@ -3023,12 +3023,30 @@ textarea {
   margin-bottom: 1.29em;
 }
 
+.text-content p + h3 {
+  margin-top: 3.45em;
+}
+
 .text-content ul {
   margin-bottom: 20px;
+  margin-bottom: 1.2em;
+}
+
+.text-content ul + h3 {
+  margin-top: 3.45em;
 }
 
 .text-content ol {
-  margin-bottom: 20px;
+  margin-bottom: 1.2em;
+  list-style: none;
+}
+
+.text-content ol > li {
+  list-style: none;
+}
+
+.text-content ol + h3 {
+  margin-top: 3.45em;
 }
 
 .text-content figure {
@@ -4785,6 +4803,32 @@ textarea {
   margin-bottom: 0;
 }
 
+.terms-page .text-content {
+  padding-top: 103px;
+  letter-spacing: 0;
+  margin-bottom: 64px;
+}
+
+.terms-page .text-content h1,
+.terms-page .text-content h2,
+.terms-page .text-content h3,
+.terms-page .text-content h4,
+.terms-page .text-content h5,
+.terms-page .text-content h5 {
+  color: #5E9D9F;
+}
+
+.terms-page .text-content h2 {
+  margin-bottom: 0.79em;
+}
+
+.terms-page .text-content h3 {
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: 0;
+  margin-bottom: 0.6em;
+}
+
 @media (min-width: 576px) {
   .our-team__head {
     display: -webkit-box;
@@ -5738,6 +5782,18 @@ textarea {
     font-size: 25px;
   }
 
+  .text-content p + h3 {
+    margin-top: 3.1em;
+  }
+
+  .text-content ul + h3 {
+    margin-top: 3.1em;
+  }
+
+  .text-content ol + h3 {
+    margin-top: 3.1em;
+  }
+
   .header__logo {
     max-width: 110px;
   }
@@ -6234,6 +6290,28 @@ textarea {
     font-size: 30px;
     line-height: 120%;
     margin-bottom: 17px;
+  }
+
+  .terms-page .container {
+    padding: 0 19px;
+  }
+
+  .terms-page .text-content {
+    padding-top: 54px;
+    margin-bottom: 34px;
+  }
+
+  .terms-page .text-content h2 {
+    font-size: 52px;
+    line-height: 100%;
+    margin-bottom: 0.85em;
+  }
+
+  .terms-page .text-content h3 {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 120%;
+    margin-bottom: 0.67em;
   }
 }
 
