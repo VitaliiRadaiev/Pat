@@ -2,6 +2,33 @@ let isMobile = { Android: function () { return navigator.userAgent.match(/Androi
 
 let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
+window.addEventListener('DOMContentLoaded', function() {
+	let proloader = document.createElement('div');
+	proloader.className = '_preload-body';
+	document.body.prepend(proloader);
+	
+	if(isMobile) {
+		document.body.classList.add('_is-mobile');
+	}
+
+	function testWebP(callback) {
+
+		var webP = new Image();
+		webP.onload = webP.onerror = function () {
+			callback(webP.height == 2);
+		};
+		webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+	}
+
+	testWebP(function (support) {
+
+		if (support == true) {
+			document.querySelector('body').classList.add('webp');
+		} else {
+			document.querySelector('body').classList.add('no-webp');
+		}
+	});
+});
 
 window.addEventListener('load', function () {
 	
@@ -34,31 +61,8 @@ window.addEventListener('load', function () {
 	
 	@@include('pages/#about.js');
 	@@include('pages/#news.js');
+	@@include('pages/#gallery.js');
 	
-});
-
-window.addEventListener('DOMContentLoaded', function() {
-	if(isMobile) {
-		document.body.classList.add('_is-mobile');
-	}
-
-	function testWebP(callback) {
-
-		var webP = new Image();
-		webP.onload = webP.onerror = function () {
-			callback(webP.height == 2);
-		};
-		webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-	}
-
-	testWebP(function (support) {
-
-		if (support == true) {
-			document.querySelector('body').classList.add('webp');
-		} else {
-			document.querySelector('body').classList.add('no-webp');
-		}
-	});
 });
 
 @@include('../common/map-block/map-block.js');

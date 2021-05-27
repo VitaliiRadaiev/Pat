@@ -2,6 +2,33 @@ let isMobile = { Android: function () { return navigator.userAgent.match(/Androi
 
 let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
+window.addEventListener('DOMContentLoaded', function() {
+	let proloader = document.createElement('div');
+	proloader.className = '_preload-body';
+	document.body.prepend(proloader);
+	
+	if(isMobile) {
+		document.body.classList.add('_is-mobile');
+	}
+
+	function testWebP(callback) {
+
+		var webP = new Image();
+		webP.onload = webP.onerror = function () {
+			callback(webP.height == 2);
+		};
+		webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+	}
+
+	testWebP(function (support) {
+
+		if (support == true) {
+			document.querySelector('body').classList.add('webp');
+		} else {
+			document.querySelector('body').classList.add('no-webp');
+		}
+	});
+});
 
 window.addEventListener('load', function () {
 	
@@ -1153,31 +1180,92 @@ if($gallerSlider) {
     });
     
 };
+	let $mainGallery = document.querySelector('.main-gallery');
+if($mainGallery) {
+    let $nav = $mainGallery.querySelector('.main-gallery__nav');
+    let $images = $mainGallery.querySelector('.main-gallery__images');
+    let dataNavSlider;
+    let dataImagesslider;
+
+    function mobileSlider() {
+        if(document.documentElement.clientWidth <= 767 && $nav.dataset.mobile == 'false') {
+            dataNavSlider = new Swiper($nav, {
+                slidesPerView: 1,
+                speed: 800,
+                spaceBetween: 15,
+            });
+
+            $nav.dataset.mobile = 'true';
+
+            //mySwiper.slideNext(0);
+        }
+
+        if(document.documentElement.clientWidth > 767) {
+            $nav.dataset.mobile = 'false';
+
+            if($nav.classList.contains('swiper-container-initialized')) {
+                dataNavSlider.destroy();
+            }
+        }
+    }
+
+    mobileSlider();
+
+    window.addEventListener('resize', () => {
+        mobileSlider();
+    })
+
+    dataImagesslider = new Swiper($images, {
+        spaceBetween: 20,
+        speed: 800,
+        effect: document.documentElement.clientWidth < 768 ? 'slide' : 'fade',
+        preloadImages: false,
+        autoHeight: true,
+        lazy: {
+            loadPrevNext: true,
+        },
+        navigation: {
+            nextEl: $mainGallery.querySelector('.slider-btn_next'),
+            prevEl: $mainGallery.querySelector('.slider-btn_prev'),
+        },
+        watchSlidesVisibility: true,
+    });
+
+    if(document.documentElement.clientWidth < 768) {
+        dataImagesslider.controller.control = dataNavSlider;
+        dataNavSlider.controller.control = dataImagesslider;
+    }
+
+    window.addEventListener('resize', () => {
+        if(document.documentElement.clientWidth < 768) {
+            dataImagesslider.controller.control = dataNavSlider;
+            dataNavSlider.controller.control = dataImagesslider;
+        } else {
+            dataImagesslider.controller.control = false;
+        }
+    })
+
+
+    let navItems = document.querySelectorAll('.main-gallery__nav-item');
+    if(navItems.length) {
+        navItems.forEach(item => {
+            let id = item.dataset.index;
+            item.addEventListener('click', () => {
+                if(document.documentElement.clientWidth > 767.98) {
+                    dataImagesslider.slideTo(id);
+                    
+                    item.classList.add('active');
+                    navItems.forEach(i => {
+                        if(i === item) return;
+                        i.classList.remove('active')
+                    })
+                }
+            })
+        })
+    }
+
+};
 	
-});
-
-window.addEventListener('DOMContentLoaded', function() {
-	if(isMobile) {
-		document.body.classList.add('_is-mobile');
-	}
-
-	function testWebP(callback) {
-
-		var webP = new Image();
-		webP.onload = webP.onerror = function () {
-			callback(webP.height == 2);
-		};
-		webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-	}
-
-	testWebP(function (support) {
-
-		if (support == true) {
-			document.querySelector('body').classList.add('webp');
-		} else {
-			document.querySelector('body').classList.add('no-webp');
-		}
-	});
 });
 
 function initMap() {
