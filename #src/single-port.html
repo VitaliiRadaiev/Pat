@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "New Project"
+})
+
+<body class="">
+    <!-- == TOP LINE ================== -->
+    @@include('common/header/_header.html',{
+    "dark": "header_dark"
+    })
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page single-port-page _padding-top">
+        <section class="hero-v2">
+            <div class="container">
+                <h1 class="hero-v2__title title-2">Bangkok Port</h1>
+            </div>
+            <div class="hero-v2__img">
+                <img src="img/photo/hero-v2-img1.jpg" alt="">
+            </div>
+        </section>
+
+        <section class="head">
+            <div class="container">
+                <h3 class="head__title title-3 title-line">
+                    <strong>
+                        we are a business unit from port authority of thailand committed
+                    </strong>
+                    <strong>
+                        to support your business to grow effectively and smoothly.
+                    </strong>
+                </h3>
+            </div>
+        </section>
+
+        <section class="text-info-block text-info-block_multiple">
+            <div class="text-info-block__body container">
+                <div class="text-info-block__img ibg">
+                    <img src="img/photo/info-block3.jpg" alt="">
+                </div>
+                <div class="text-info-block__text-wrap text-content">
+                    <h3>
+                        About Bangkok Port
+                    </h3>
+                    <p>
+                        Was established in accordance with the
+                        Port Authority of Thailand Act, B.E. 2494
+                        with the objective to arrange operations and
+                        bring prosperity to the port business
+                        For the
+                        benefit of the state and the people,
+                    </p>
+                    <p>
+                        at present, the Port Authority of Thailand is
+                        responsible for the management
+                        of the major ports such as Bangkok Port,
+                        Laem Chabang Port, Chiang Saen
+                        Commercial Port, Chiang Khong Port,
+                        And
+                        Ranong port.
+                    </p>
+                </div>
+            </div>
+            <div class="text-info-block__body container">
+                <div class="text-info-block__img ibg">
+                    <img src="img/photo/info-block4.jpg" alt="">
+                </div>
+                <div class="text-info-block__text-wrap text-content">
+                    <h3>
+                        General Information
+                    </h3>
+                    <p>
+                        Bangkok Port has a total area of approximately 3,764,800 sq.m with a total length of 1,479 meters in front of
+                        the port, with a depth of not more than 8.2 meters, support for vessels weighing up to 12,000 deathweight
+                        tons, with an area for placing cargo inbound containers of 210,868 sq.m, with a volume of cargo passing
+                        through the port of 1.4 million TEU per year
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages">
+            <spaun class="plus"></spaun>
+            <div class="advantages__body container">
+                <div class="advantages__column">
+                    <div class="advantages__img ibg">
+                        <img src="img/photo/advantages-img1.jpg" alt="">
+                    </div>
+                    <div class="advantages__text text-content">
+                        <h3>Equipment</h3>
+                        <ul>
+                            <li>
+                                Quay Cranes : 17
+                            </li>
+                            <li>
+                                Rubber Tyred Gantry Cranes : 38
+                            </li>
+                            <li>
+                                Reachstackers : 29
+                            </li>
+                            <li>
+                                Empty Container Handlers : 23
+                            </li>
+                            <li>
+                                Tractors : 108
+                            </li>
+                            <li>
+                                Chasis : 110
+                            </li>
+                            <li>
+                                Forklifts : 238
+                            </li>
+                            <li>
+                                Reefer plugs : 784
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="advantages__column">
+                    <div class="advantages__img ibg">
+                        <img src="img/photo/advantages-img2.jpg" alt="">
+                    </div>
+                    <div class="advantages__text text-content">
+                        <h3>Services</h3>
+                        <ul>
+                            <li>
+                                Container Terminal
+                            </li>
+                            <li>
+                                Passenger terminal
+                            </li>
+                            <li>
+                                Container Yard
+                            </li>
+                            <li>
+                                Barge Terminal
+                            </li>
+                            <li>
+                                Stuffing
+                            </li>
+                            <li>
+                                Container Freight Station
+                            </li>
+                            <li>    
+                                Reefer Plugs
+                            </li>
+                            <li>
+                                Leasing Property
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-block">
+            <div class="map-block__column-1 container">
+                <div class="map-block__text-wrap">
+                    <img class="map-block__icon" src="img/icons/local.svg" alt="">
+                    <div class="map-block__address">
+                        <p>
+                            Port Authority of Thailand,
+                        </p>
+                        <p>
+                            444 Ta Rua Road, Klong Toey,
+                        </p>
+                        <p>
+                            Bangkok, Thailand 10110.
+                        </p>
+                    </div>
+                    <a href="tel:6622695317">Tel: +662 269 5317</a>
+                    <a href="mailto:patmarketing@port.co.th ">Email: patmarketing@port.co.th </a>
+                </div>
+            </div>
+            <div class="map-block__column-2">
+                <div class="map-block__map" id="map" data-icon-src="img/icons/local-solid.svg" data-lat="13.713346082324241" data-lng="100.56397236961912" ></div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- == FOOTER ================== -->
+    @@include('common/footer/_footer.html',{})
+    <!-- == // FOOTER ================== -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+        defer></script>
+    @@include('_js.html',{})
+
+</body>
+
+</html>

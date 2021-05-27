@@ -544,12 +544,31 @@ button.btn-default {
 	}
 
 	& ul {
+		margin-bottom: 20px;
 	}
 
 	& ol {
+		margin-bottom: 20px;
 	}
 
 	& figure {
+		margin-bottom: 20px;
+
+		& img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	& a {
+		color: $linkColor;
+		transition: all .3s ease;
+
+		@media (min-width: 992px) {
+			&:hover {
+				color: $mainColor2;
+			}
+		}
 	}
 }
 // === and TEXT CONTETN BLOCK ========================================================================
@@ -574,5 +593,6 @@ button.btn-default {
 @import "pages/#news-detail";
 @import "pages/#contact";
 @import "pages/#gallery";
+@import "pages/#single-port";
 
 // ==== AND PAGES =====================================================
