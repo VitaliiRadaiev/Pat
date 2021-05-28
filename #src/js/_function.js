@@ -89,53 +89,6 @@ $('img.img-svg').each(function(){
 
 
 
-//Spollers
-function spollerInit() {
-	let spollers = document.querySelectorAll("._spoller");
-	if (spollers.length > 0) {
-		for (let index = 0; index < spollers.length; index++) {
-			const spoller = spollers[index];
-
-			if(spoller.classList.contains('_active')) {
-				_slideDown(spoller.nextElementSibling);
-			}
-
-			spoller.addEventListener("click", function (e) {
-				e.preventDefault();
-				if (spoller.classList.contains('_spoller-992') && window.innerWidth > 992) {
-					return false;
-				}
-				if (spoller.classList.contains('_spoller-768') && window.innerWidth > 768) {
-					return false;
-				}
-				if (spoller.closest('._spollers').classList.contains('_one')) {
-					let curent_spollers = spoller.closest('._spollers').querySelectorAll('._spoller');
-					for (let i = 0; i < curent_spollers.length; i++) {
-						let el = curent_spollers[i];
-						if (el != spoller) {
-							el.classList.remove('_active');
-							el.parentElement.classList.remove('_active');
-							_slideUp(el.nextElementSibling);
-						}
-					}
-				}
-				spoller.classList.toggle('_active');
-				if(spoller.classList.contains('_active')) {
-					spoller.parentElement.classList.add('_active');
-				} else {
-					spoller.parentElement.classList.remove('_active');
-				}
-				_slideToggle(spoller.nextElementSibling);
-			});
-		}
-	}
-}
-spollerInit()
-// === // Spollers ==================================================================
-
-
-
-
 if($('.anchor').length>0) {
 	$(".anchor").click(function() {
 	  var elementClick = $(this).attr("href").match(/#\w+$/gi).join(''); 
@@ -145,52 +98,4 @@ if($('.anchor').length>0) {
 	  }, 600);
 	  return false;
 	});
-}
-
-
-function createTabs(containerName = false, triggersName = false, tabsName = false) {
-    let container = document.querySelector(`${containerName}`);
-    if(container) {
-       let allTriggers = document.querySelectorAll(`${triggersName}`);
-       let allTabs = document.querySelectorAll(`${tabsName}`);
-
-       if(!allTabs.length) {
-        let err = new Error('Tabs not found.');
-        throw err;
-       }
-
-       if(allTriggers.length) {
-           allTriggers.forEach(trigger => {
-               trigger.addEventListener('click', (e) => {
-                   e.preventDefault();
-                   const id = trigger.getAttribute('href').replace('#','');
-                  
-                   trigger.classList.add('active');
-
-                   allTriggers.forEach(i => {
-                       if(i == trigger) {
-                           return
-                       }
-                       i.classList.remove('active');
-                   });
-
-                   allTabs.forEach(tab => {
-                       if(tab.id == id) {
-                           tab.classList.add('active')
-                       } else {
-                           tab.classList.remove('active');
-                       }
-                   })
-                   
-               })
-           })
-       } else {
-        let err = new Error('Triggers not found.');
-        throw err;
-       }
-        
-    } else {
-      let err = new Error('Container not found.');
-      throw err;
-    }
 }

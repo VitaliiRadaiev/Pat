@@ -3,11 +3,8 @@ let isMobile = { Android: function () { return navigator.userAgent.match(/Androi
 let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
 window.addEventListener('DOMContentLoaded', function() {
-	let proloader = document.createElement('div');
-	proloader.className = '_preload-body';
-	document.body.prepend(proloader);
-	
-	if(isMobile) {
+
+	if(isMobile.any()) {
 		document.body.classList.add('_is-mobile');
 	}
 
@@ -56,6 +53,7 @@ window.addEventListener('load', function () {
 	@@include('../common/header/header.js');
 	@@include('../common/popup/popup.js');
 	@@include('../common/ports/ports.js');
+	@@include('../common/cookie-message/cookie-message.js');
 	
 	
 	

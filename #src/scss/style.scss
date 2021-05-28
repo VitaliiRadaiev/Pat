@@ -389,6 +389,40 @@ textarea {
 // === and title ========================================================================
 
 // === btn ========================================================================
+.circle-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 224px;
+	width: 224px;
+	border: 1px solid transparent;
+	transition: all 0.3s ease;
+	background-color: $mainColor;
+	padding: 15px;
+	font-size: 22px;
+	line-height: 110%;
+	text-align: center;
+	color: #ffffff;
+	border-radius: 50%;
+
+	@media (max-width: $md3+px) {
+		height: 180px;
+		width: 180px;
+		font-size: 20px;
+	}
+
+	@media (min-width: 992px) {
+		&:hover {
+			background-color: transparent;
+			border-color: #fff;
+		}
+	}
+
+	&:active {
+		background-color: $mainColor !important;
+	}
+}
+
 .btn-default {
 	display: inline-flex;
 	justify-content: center;
@@ -614,6 +648,7 @@ button.btn-default {
 @import "../common/head/head";
 @import "../common/text-info-block/text-info-block";
 @import "../common/map-block/map-block";
+@import "../common/cookie-message/cookie-message";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
@@ -626,5 +661,6 @@ button.btn-default {
 @import "pages/#gallery";
 @import "pages/#single-port";
 @import "pages/#terms";
+@import "pages/#page404";
 
 // ==== AND PAGES =====================================================

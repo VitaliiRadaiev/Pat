@@ -5,6 +5,7 @@
 })
 
 <body >
+    <div class="_preload-body"></div>
     <!-- == TOP LINE ================== -->
     @@include('common/header/_header.html',{
     "dark": ""
@@ -107,6 +108,7 @@
     <!-- == FOOTER ================== -->
     @@include('common/footer/_footer.html',{})
     <!-- == // FOOTER ================== -->
+    @@include('common/cookie-message/_cookie-message.html',{})
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"

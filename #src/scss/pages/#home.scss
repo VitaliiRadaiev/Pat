@@ -74,33 +74,7 @@
     }
 
     &__btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 224px;
-        width: 224px;
-        border: 1px solid transparent;
-        transition: all 0.3s ease;
-        background-color: $mainColor;
-        padding: 15px;
-        font-size: 22px;
-        line-height: 110%;
-        text-align: center;
-        color: #ffffff;
-        border-radius: 50%;
 
-        @media (max-width: $md3+px) {
-            height: 180px;
-            width: 180px;
-            font-size: 20px;
-        }
-
-        @media (min-width: 992px) {
-            &:hover {
-                background-color: transparent;
-                border-color: #fff;
-            }
-        }
     }
 }
 

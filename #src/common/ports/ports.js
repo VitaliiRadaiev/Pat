@@ -23,6 +23,7 @@ if ($ports) {
         spaceBetween: 0,
         speed: 800,
         effect: document.documentElement.clientWidth < 768 ? 'slide' : 'fade',
+        preloadImages: false,
         lazy: {
             loadPrevNext: true,
         },

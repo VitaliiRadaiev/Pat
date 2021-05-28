@@ -72,10 +72,7 @@
 	}
 
 	&.header_dark {
-		& .header__body {
-			padding-top: 5px;
-			padding-bottom: 10px;
-		}
+
 
 		& .header__logo {
 			& svg {
@@ -126,9 +123,7 @@
 			}
 		}
 
-		& .menu__row-1 {
-			margin-bottom: 0;
-		}
+
 
 		& .burger span {
 			background-color: $mainColor;

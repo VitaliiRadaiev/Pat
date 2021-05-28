@@ -1,5 +1,13 @@
+body._is-mobile  {
+    .main-gallery {
+        & .main-gallery__images-item-link {
+            opacity: 1;
+        }
+    }
+}
+
 .main-gallery {
-    padding-top: 104px;
+    padding-top: 92px;
 
     @media (max-width: $md3+px) {
         padding-top: 53px;

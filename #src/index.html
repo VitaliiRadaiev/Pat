@@ -5,6 +5,7 @@
 })
 
 <body class="">
+	<div class="_preload-body"></div>
 	<!-- == TOP LINE ================== -->
 	@@include('common/header/_header.html',{
 		"dark": ""
@@ -24,7 +25,7 @@
 				<div class="promo-header__subtitle">
 					<strong>Open</strong> for <strong>Business</strong>
 				</div>
-				<a href="#" class="promo-header__btn">
+				<a href="#" class="promo-header__btn circle-btn">
 					<span>
 						Discuss
 						Opportunities
@@ -251,6 +252,7 @@
 	<!-- == FOOTER ================== -->
 	@@include('common/footer/_footer.html',{})
 	<!-- == // FOOTER ================== -->
+	@@include('common/cookie-message/_cookie-message.html',{})
 	@@include('common/popup/_popup.html',{})
 
 	@@include('_js.html',{})
